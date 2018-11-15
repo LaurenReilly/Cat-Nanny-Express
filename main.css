@@ -1,0 +1,28 @@
+/*font-family: 'Shrikhand', cursive;
+font-family: 'Montserrat', sans-serif; */
+
+/* COLOR SCHEME:
+minty green/blue - #4ABDAC
+orange/red - #FC4A1A
+yellow - #F7B733
+grey/lavender - #DFDCE3 */
+
+body {
+    height: 100%;
+    background-color: #4ABDAC;
+    font-size: 1em;
+}
+
+
+.shrikhand {
+    font-family: 'Shrikhand', cursive;
+    color: #FC4A1A;
+    text-shadow: 3px 3px #F7B733;
+    font-size: 8em;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    color: #DFDCE3;
+    font-size: 2em;
+}
