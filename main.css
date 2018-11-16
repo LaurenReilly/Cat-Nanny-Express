@@ -21,8 +21,12 @@ body {
     font-size: 4em;
 }
 
-p {
+.montserrat {
     font-family: 'Montserrat', sans-serif;
     color: #DFDCE3;
     font-size: 2em;
+}
+
+.picture {
+    background-color: #F7B733;
 }
