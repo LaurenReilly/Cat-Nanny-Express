@@ -15,12 +15,43 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Shrikhand" rel="stylesheet">
 </head>
 <body>
-    <div class="text-center">
-            <h1 class="shrikhand m-5">Cat Nanny Express</h1>
+    <div class="container-fluid">
+        <div class="text-center">
+            <h1 class="shrikhand mb-4">Cat Nanny Express</h1>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="d-flex flex-column justify-content-between mt-5">
+                    <button class="btn btn-success btn-lg m-5">Feed</button>
+                    <button class="btn btn-primary btn-lg m-5">Groom</button>
+                    <button class="btn btn-warning btn-lg m-5">Play</button>
+                </div>
+            </div>
+            <div class="col-4 mr-5">
+                <div class="d-flex flex-column align-content-center justify-content-around" style="width: 500px;">
+                    <div class="d-flex justify-content-around">
+                        <button class="btn btn-success btn-lg">Cat</button>
+                        <button class="btn btn-primary btn-lg">Dog</button>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between">
+                        <div class="picture p-1 border rounded mt-2" style="height: 400px; width: 500px;">
+                            <div class="image border rounded m-auto" style="height: 390px; width: 390px; background-color: #DFDCE3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1 m-5">
+                    <div class="outer m-auto d-flex justify-content-center align-items-end p-1 border rounded" style="height: 400px; width: 40px; background-color: #FC4A1A;">
+                        <div class="inner border rounded" style="height: 50%; width: 36px; background-color: #F7B733;"></div>
+                    </div>
+            </div>
+            <div class="col-2 d-flex flex-column mt-5 justify-content-center align-items-center">
+                    <h3 class="montserrat text-center m-2">UserName</h3>
+                    <h2 class="montserrat text-center">YourScore: 1000</h2>
+            </div>
+        </div>
     </div>
-    <div class="text-center">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit distinctio eius aspernatur illo itaque suscipit debitis reprehenderit quos, iure tempore?</p>
-    </div>
+
 
     <!-- our javscript file -->
     <script src="main.js"></script>
