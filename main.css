@@ -30,3 +30,7 @@ body {
 .picture {
     background-color: #F7B733;
 }
+
+#pet {
+    overflow: hidden;
+}

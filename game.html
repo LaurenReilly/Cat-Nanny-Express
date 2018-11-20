@@ -22,32 +22,35 @@
         <div class="row">
             <div class="col-3">
                 <div class="d-flex flex-column justify-content-between mt-5">
-                    <button class="btn btn-success btn-lg m-5">Feed</button>
-                    <button class="btn btn-primary btn-lg m-5">Groom</button>
-                    <button class="btn btn-warning btn-lg m-5">Play</button>
+                    <button onclick="incrementScore('feed')" class="btn btn-success btn-lg m-5">Feed</button>
+                    <button onclick="incrementScore('groom')" class="btn btn-primary btn-lg m-5">Groom</button>
+                    <button onclick="incrementScore('play')" class="btn btn-warning btn-lg m-5">Play</button>
                 </div>
             </div>
             <div class="col-4 mr-5">
                 <div class="d-flex flex-column align-content-center justify-content-around" style="width: 500px;">
                     <div class="d-flex justify-content-around">
-                        <button class="btn btn-success btn-lg">Cat</button>
-                        <button class="btn btn-primary btn-lg">Dog</button>
+                        <button class="btn btn-success btn-lg" onclick="generateCat()">Cat</button>
+                        <button class="btn btn-primary btn-lg" onclick="generateDog()">Dog</button>
                     </div>
                     <div class="d-flex flex-row justify-content-between">
                         <div class="picture p-1 border rounded mt-2" style="height: 400px; width: 500px;">
-                            <div class="image border rounded m-auto" style="height: 390px; width: 390px; background-color: #DFDCE3"></div>
+                            <div id="pet" class="image border rounded m-auto" style="height: 390px; width: 390px; background-color: #DFDCE3"></div>
                         </div>
                     </div>
+                    <div id="name" class="montserrat text-center"></div>
                 </div>
             </div>
             <div class="col-1 m-5">
                     <div class="outer m-auto d-flex justify-content-center align-items-end p-1 border rounded" style="height: 400px; width: 40px; background-color: #FC4A1A;">
-                        <div class="inner border rounded" style="height: 50%; width: 36px; background-color: #F7B733;"></div>
+                        <div id="statusBar" class="inner border rounded" style="height: 10%; width: 36px; background-color: #F7B733;"></div>
                     </div>
             </div>
             <div class="col-2 d-flex flex-column mt-5 justify-content-center align-items-center">
-                    <h3 class="montserrat text-center m-2">UserName</h3>
-                    <h2 class="montserrat text-center">YourScore: 1000</h2>
+                    <h3 class="montserrat text-center">Time Remaining:</h3>
+                    <div id="timer" class="montserrat mb-3"></div>
+                    <h3 id="gameName" class="montserrat text-center mb-3">UserName</h3>
+                    <h2 class="montserrat text-center">YourScore: <span id="gameScore" class="shrikhand" style="font-size: 2em"></span></h2>
             </div>
         </div>
     </div>
