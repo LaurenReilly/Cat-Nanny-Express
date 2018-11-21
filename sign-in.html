@@ -15,26 +15,22 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Shrikhand" rel="stylesheet">
 </head>
 <body>
-  <h1 class="shrikhand m-5">Cat Nanny Express</h1>
+    <h1 class="shrikhand m-5">Cat Nanny Express</h1>
 
-<br>
-  <div class="container">
-      <p class="montserrat m-4 text-center">Who's Your Nanny?</p>
-      
-
-
-                <form>
-                        <div class="form-group">
-                          <label for="nannyName">Nanny Name:</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Meow">
-                          <small id="emailHelp" class="form-text text-muted"></small>
-                        </div>
-                       
-                        </div>
-                        <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-primary">Come on in!</button>
-                    </div>
-                      </form>
+    <br>
+    <div class="container">
+        <p class="montserrat m-4 text-center">Who's Your Nanny?</p>
+        <form id="frm1" name="frm1">
+            <div class="form-group">
+                <label for="nannyName">Nanny Name:</label>
+                <input type="text" name="usrname" maxlength="10" class="form-control" id="playerName" aria-describedby="playerName" placeholder="Meow" required>
+            </div>
+                    
+            <div class="d-flex justify-content-center">
+                <button id="userNameSubmit" type="button" form="frm1" onclick="setName()" class="btn btn-primary">Come on in!</button>
+                <p id="demo"></p>
+            </div>
+        </form>
   </div>
   <div class="text-center">
       <h3 class="montserrat m-5">Instructions:</h3>
@@ -44,7 +40,8 @@
       <p>3. Care for as many pets as possible within 3 minutes!</p>
       <p>4. Repeat</p>
 
-      <IMG SRC="https://media0.giphy.com/media/10SAlsUFbyl5Dy/giphy.gif">
+      
+  </div>
 
     <!-- our javscript file -->
     <script src="main.js"></script>
