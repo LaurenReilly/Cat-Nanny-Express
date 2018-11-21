@@ -1,4 +1,5 @@
 //animal object
+
 var pet = {
     feed: 0,
     play: 0,
@@ -164,5 +165,6 @@ function gameEnd() {
     window.location = "win-screen.html";
     //store userdata into firebase
     //go to end screen
+
 }
 

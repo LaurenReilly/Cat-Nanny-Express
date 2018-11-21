@@ -19,11 +19,13 @@
         <h1 class="shrikhand m-5">Cat Nanny Express</h1>
     </div>
     <div class = "container">
+
         <div class="text-center">
             <h1 class="">Game Over!</h1>
-            <p>Your Score: 999</p>
+            <p id ="finalScore" class="montserrat">Your Score: 999</p>
             <h2 class="mt-5 mb-4">HIGH SCORES</h2>
-        
+    
+    <div id="highScoreList">
         <div class="row border-bottom mt-3">
             <div id="name" class="col-6" style="font-size: 22px;">Ashley</div>
             <div id="score"class="col-6" style="font-size: 22px;">234567</div> 
@@ -35,11 +37,29 @@
         <div class="row border-bottom mt-3">
                 <div class="col" style="font-size: 22px;">Lauren</div>
                 <div class="col" style="font-size: 22px;">123334</div>
-            </div>
-
-        <button type="button" class="btn btn-lg mt-5" style="background-color: #F7B733">PLAY AGAIN?</button>
         </div>
     </div>
+
+        <button onclick="playAgain()" type="button" class="btn btn-lg mt-5" style="background-color: #F7B733">PLAY AGAIN?</button>
+        </div>
+
+    </div>
+    
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBIZFGwz6xcS7Ph0DwwyFAzfLKcVK-vQQs",
+        authDomain: "cat-nanny-express.firebaseapp.com",
+        databaseURL: "https://cat-nanny-express.firebaseio.com",
+        projectId: "cat-nanny-express",
+        storageBucket: "cat-nanny-express.appspot.com",
+        messagingSenderId: "720997033836"
+      };
+      firebase.initializeApp(config);
+    </script>
+
     <!-- our javscript file -->
     <script src="main.js"></script>
 </body>
