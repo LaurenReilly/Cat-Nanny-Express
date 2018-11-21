@@ -102,6 +102,20 @@ function statusBar() {
     }
 }
 
+<<<<<<< HEAD
+=======
+//set userName and score on Game Page
+var userName = document.getElementById("gameName");
+var userScore = document.getElementById("gameScore");
+
+function setUserAndScore() {
+    userName.innerHTML = player.name;
+    userScore.innerHTML = player.score;
+}
+
+
+
+>>>>>>> master
 //increment player score when feed/groom/play buttons are clicked, won't increment if pet care is completed or no pet selected
 //the flag of pet.active boolean in the pet object is what prevents that behavior
 function incrementScore(care) {
@@ -151,4 +165,11 @@ function gameEnd() {
     window.location = "win-screen.html";
     //store userdata into firebase
 }
+
+//Sign in
+
+
+
+
+
 
