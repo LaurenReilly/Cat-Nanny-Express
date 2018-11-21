@@ -8,8 +8,13 @@ var pet = {
 
 var player = {
     name: "entered on sign-in screen",
+
     score: 0
+
+   
+
 }
+
 
 
 
@@ -165,4 +170,17 @@ function gameEnd() {
     //store userdata into firebase
     //go to end screen
 }
+
+//Sign in
+
+ function userName() {
+    var userName = document.getElementById("playerName").value;
+    console.log(userName);
+    
+    
+
+    }
+
+
+
 
