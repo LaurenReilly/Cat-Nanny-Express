@@ -7,36 +7,36 @@ var pet = {
 }
 
 var player = {
-    name: "entered on sign-in screen",
+    name: "",
     score: 0
 }
 
+function setName() {
+    var badWords = ["cunt","fuck","shit"];
+    
+    var userName = document.getElementById("playerName").value;
+    
+    var userNameSubmit = document.getElementById("userNameSubmit");
+    
+    if (badWords.includes(userName.toLowerCase())) {
+        userNameSubmit.style.backgroundColor = "#FC4A1A";
+        userNameSubmit.innerHTML = "Our animals have sensitive ears!!!"
+    } else {
+        player.name = userName;
+        window.location = "game.html"
+        setUserAndScore();
+    }
+}
 
 
+//set userName and score on Game Page
+var userNameDisplay = document.getElementById("gameName");
+var userScore = document.getElementById("gameScore");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function setUserAndScore() {
+    userNameDisplay.innerHTML = player.name;
+    userScore.innerHTML = player.score;
+}
 
 
 
@@ -102,17 +102,6 @@ function statusBar() {
     }
 }
 
-//set userName and score on Game Page
-var userName = document.getElementById("gameName");
-var userScore = document.getElementById("gameScore");
-
-function setUserAndScore() {
-    userName.innerHTML = player.name;
-    userScore.innerHTML = player.score;
-}
-
-setUserAndScore();
-
 //increment player score when feed/groom/play buttons are clicked, won't increment if pet care is completed or no pet selected
 //the flag of pet.active boolean in the pet object is what prevents that behavior
 function incrementScore(care) {
@@ -159,10 +148,7 @@ window.onload = function () {
 };
 
 function gameEnd() {
-    console.log(player.score);
-    console.log(player.name);
     window.location = "win-screen.html";
     //store userdata into firebase
-    //go to end screen
 }
 
