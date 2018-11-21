@@ -20,38 +20,6 @@ var player = {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var names = ["Lorenzo", "Roxy", "Opal", "Vincent", "Joel", "Karlyn", "Dorie", "Mollie", "Gem", "Britt", "Emilia", "Hillary","Freddy", "Anastacia", "Shaunda", "Velda", "Selene", "Heath", "Bradley", "Torrie", "Christian", "Sachiko", "Jarrod", "Loree", "Bernice", "Georgianne", "Shon", "Hershel", "Tiesha", "Miles", "Karmen", "Kai", "Lue", "Cora", "Jessia", "Lavina", "Alex", "Eun", "Edith", "Meda", "Alysha", "Fidela", "Tori", "Malik", "Xavier", "Tad", "Blanch", "Loma", "Terisa", "Annice", "Lorna", "Mittie", "Cara", "Daisey", "Beula", "Mariann", "Treva", "Gilma", "Dee", "Ophelia", "Sherril", "Verlene", "Carter", "Lynnette", "Suellen", "Alanna", "Shirleen", "Shiela", "Edda", "Hae", "Maggie", "Katharyn", "Chery", "Augustina", "Blake", "Waylon", "Kam", "Trudie", "Ernestina", "Tyra", "Yukiko", "Anh", "Latashia", "Wilhelmina", "Derick", "Yolanda", "Lakesha", "Janessa", "Cristie", "Marilyn", "Ewa", "Geraldo", "Jonah", "Norene", "Max", "Shin", "Ervin", "Thelma", "Rhett", "Hiram"]
 
 
@@ -116,7 +84,7 @@ function setUserAndScore() {
     userScore.innerHTML = player.score;
 }
 
-setUserAndScore();
+
 
 //increment player score when feed/groom/play buttons are clicked, won't increment if pet care is completed or no pet selected
 //the flag of pet.active boolean in the pet object is what prevents that behavior
@@ -173,13 +141,7 @@ function gameEnd() {
 
 //Sign in
 
- function userName() {
-    var userName = document.getElementById("playerName").value;
-    console.log(userName);
-    
-    
 
-    }
 
 
 

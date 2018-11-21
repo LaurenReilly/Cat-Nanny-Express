@@ -23,11 +23,11 @@
         <form id="frm1" name="frm1">
             <div class="form-group">
                 <label for="nannyName">Nanny Name:</label>
-                <input type="text" class="form-control" id="playerName" aria-describedby="playerName" placeholder="Meow">
+                <input type="text" name="usrname" maxlength="10" class="form-control" id="playerName" aria-describedby="playerName" placeholder="Meow" required>
             </div>
                     
             <div class="d-flex justify-content-center">
-                <button type="button" form="frm1" onclick="userName()" class="btn btn-primary">Come on in!</button>
+                <button id="userNameSubmit" type="button" form="frm1" onclick="setName()" class="btn btn-primary">Come on in!</button>
                 <p id="demo"></p>
             </div>
         </form>
