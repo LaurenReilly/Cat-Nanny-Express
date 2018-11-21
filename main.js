@@ -155,16 +155,18 @@ function startTimer(duration) {
 }
 
 window.onload = function () {
-    var threeMinutes = 60 * 3;
+    var threeMinutes = 60 * .25;
     startTimer(threeMinutes);
 };
 
 function gameEnd() {
-    console.log(player.score);
-    console.log(player.name);
-    window.location = "win-screen.html";
-    //store userdata into firebase
-    //go to end screen
 
+    window.location = "win-screen.html";
+    
 }
 
+
+
+function playAgain() {
+    window.location = "sign-in.html";
+}
