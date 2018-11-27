@@ -9,39 +9,12 @@ var pet = {
 
 var player = {
     name: "entered on sign-in screen",
+
     score: 0
+
+   
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -112,7 +85,7 @@ function setUserAndScore() {
     userScore.innerHTML = player.score;
 }
 
-setUserAndScore();
+
 
 //increment player score when feed/groom/play buttons are clicked, won't increment if pet care is completed or no pet selected
 //the flag of pet.active boolean in the pet object is what prevents that behavior
@@ -165,8 +138,6 @@ function gameEnd() {
     
 }
 
+//Sign in
 
 
-function playAgain() {
-    window.location = "sign-in.html";
-}
