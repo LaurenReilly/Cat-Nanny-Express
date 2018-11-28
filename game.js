@@ -137,7 +137,7 @@ function startTimer(duration) {
 
 //starts a two minute timer when this page loads
 window.onload = function () {
-    var twoMinutes = 60 * .15;
+    var twoMinutes = 60 * 2;
     startTimer(twoMinutes);
 };
 
