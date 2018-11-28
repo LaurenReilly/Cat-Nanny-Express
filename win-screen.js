@@ -27,4 +27,5 @@ function highScoreList() {
    <div class="row border-bottom mt-3">
        <div class="col" style="font-size: 22px;" id="username">${nameFromDb}</div>
        <div class="col" style="font-size: 22px;" id="highscores">${scoreFromDb}</div>
-   </div> `
+   </div> ` 
+}
