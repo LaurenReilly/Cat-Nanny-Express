@@ -34,3 +34,29 @@ body {
 #pet {
     overflow: hidden;
 }
+
+.form-control {
+    height: 2.5em;
+    width: 16em;
+    font-size: 20px; 
+   
+}
+
+input {
+    display: block;
+    Margin: 0 auto;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;  
+}
+
+.struction{
+    color: #F7B733;
+}
+button {
+    background-color:#F7B733;
+    
+    
+}
+
