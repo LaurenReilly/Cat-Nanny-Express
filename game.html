@@ -34,29 +34,33 @@
                         <button class="btn btn-primary btn-lg" onclick="generateDog()">Dog</button>
                     </div>
                     <div class="d-flex flex-row justify-content-between">
-                        <div class="picture p-1 border rounded mt-2" style="height: 400px; width: 500px;">
-                            <div id="pet" class="image border rounded m-auto" style="height: 390px; width: 390px; background-color: #DFDCE3"></div>
+                        <div class="picture p-1 rounded mt-2" style="height: 400px; width: 500px;">
+                            <div id="pet" class="image rounded m-auto" style="height: 390px; width: 390px; background-color: #F7B733"></div>
                         </div>
                     </div>
                     <div id="name" class="montserrat text-center"></div>
                 </div>
             </div>
             <div class="col-1 m-5">
-                    <div class="outer m-auto d-flex justify-content-center align-items-end p-1 border rounded" style="height: 400px; width: 40px; background-color: #FC4A1A;">
-                        <div id="statusBar" class="inner border rounded" style="height: 10%; width: 36px; background-color: #F7B733;"></div>
+                    <div class="outer m-auto d-flex justify-content-center align-items-end p-1 rounded" style="height: 400px; width: 40px; background-color: #FC4A1A;">
+                        <div id="statusBar" class="inner rounded" style="height: 10%; width: 36px; background-color: #F7B733;"></div>
                     </div>
             </div>
             <div class="col-2 d-flex flex-column mt-5 justify-content-center align-items-center">
                     <h3 class="montserrat text-center">Time Remaining:</h3>
                     <div id="timer" class="montserrat mb-3"></div>
-                    <h3 id="gameName" class="montserrat text-center mb-3">UserName</h3>
+                    <h3 id="gameName" class="montserrat text-center mb-3"></h3>
                     <h2 class="montserrat text-center">YourScore: <span id="gameScore" class="shrikhand" style="font-size: 2em"></span></h2>
             </div>
         </div>
+        <audio src="sounds/cat.wav" id="catSound"></audio>
+        <audio src="sounds/dog.wav" id="dogSound"></audio>
+        <audio src="sounds/right.wav" id="rightSound"></audio>
+        <audio src="sounds/wrong.wav" id="wrongSound"></audio>
     </div>
 
 
     <!-- our javscript file -->
-    <script src="main.js"></script>
+    <script src="game.js"></script>
 </body>
 </html>
