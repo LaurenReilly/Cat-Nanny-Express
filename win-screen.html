@@ -1,46 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Cat Nanny Express</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <!-- our css -->
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <!-- axios script -->
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Shrikhand" rel="stylesheet">
+   <meta charset="utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Cat Nanny Express</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- bootstrap -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   <!-- our css -->
+   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+   <!-- axios script -->
+   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+   <!-- fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Montserrat|Shrikhand" rel="stylesheet">
+   <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+   <script>
+   // Initialize Firebase
+   var config = {
+       apiKey: "AIzaSyBIZFGwz6xcS7Ph0DwwyFAzfLKcVK-vQQs",
+       authDomain: "cat-nanny-express.firebaseapp.com",
+       databaseURL: "https://cat-nanny-express.firebaseio.com",
+       projectId: "cat-nanny-express",
+       storageBucket: "cat-nanny-express.appspot.com",
+       messagingSenderId: "720997033836"
+   };
+   firebase.initializeApp(config);
+   </script>
 </head>
 <body>
-    <div class="text-center">
-        <h1 class="shrikhand m-5">Cat Nanny Express</h1>
-    </div>
-    <div class = "container">
-        <div class="text-center">
-            <h1 class="">Game Over!</h1>
-            <p>Your Score: <span id="scoreContainer"></span></p>
-            <h2 class="mt-5 mb-4">HIGH SCORES</h2>
-        
-        <div class="row border-bottom mt-3">
-            <div id="name" class="col-6" style="font-size: 22px;">Ashley</div>
-            <div id="score"class="col-6" style="font-size: 22px;">234567</div> 
-        </div>
-        <div class="row border-bottom mt-3">
-            <div class="col" style="font-size: 22px;">Steph</div>
-            <div class="col" style="font-size: 22px;">123334</div>
-        </div>
-        <div class="row border-bottom mt-3">
-                <div class="col" style="font-size: 22px;">Lauren</div>
-                <div class="col" style="font-size: 22px;">123334</div>
-            </div>
+   <div class="text-center">
+       <h1 class="shrikhand m-5">Cat Nanny Express</h1>
+   </div>
+   <div class = "container">
 
-        <button type="button" class="btn btn-lg mt-5" style="background-color: #F7B733">PLAY AGAIN?</button>
-        </div>
-    </div>
-    <!-- our javscript file -->
-    <script src="win-screen.js"></script>
+       <div class="text-center">
+           <h1 class="">Game Over!</h1>
+           <p id ="finalScore" class="montserrat">Your Score: 999</p>
+           <h2 class="mt-5 mb-4">HIGH SCORES</h2>
+
+  
+   <div id="highScoreList">
+       <div class="row border-bottom mt-3">
+           <div id="name" class="col-6" style="font-size: 22px;">Ashley</div>
+           <div id="score"class="col-6" style="font-size: 22px;">234567</div>
+       </div>
+       <div class="row border-bottom mt-3">
+           <div class="col" style="font-size: 22px;">Steph</div>
+           <div class="col" style="font-size: 22px;">123334</div>
+       </div>
+       <div class="row border-bottom mt-3">
+               <div class="col" style="font-size: 22px;">Lauren</div>
+               <div class="col" style="font-size: 22px;">123334</div>
+       </div>
+   </div>
+
+       <button onclick="playAgain()" type="button" class="btn btn-lg mt-5" style="background-color: #F7B733">PLAY AGAIN?</button>
+
+       </div>
+
+   </div>
+  
+   <!-- our javscript file -->
+   <script src="win-screen.js"></script>
 </body>
 </html>
