@@ -13,6 +13,19 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Shrikhand" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBIZFGwz6xcS7Ph0DwwyFAzfLKcVK-vQQs",
+        authDomain: "cat-nanny-express.firebaseapp.com",
+        databaseURL: "https://cat-nanny-express.firebaseio.com",
+        projectId: "cat-nanny-express",
+        storageBucket: "cat-nanny-express.appspot.com",
+        messagingSenderId: "720997033836"
+    };
+    firebase.initializeApp(config);
+    </script>
 </head>
 <body>
     <div class="text-center">
@@ -24,6 +37,7 @@
             <h1 class="">Game Over!</h1>
             <p id ="finalScore" class="montserrat">Your Score: 999</p>
             <h2 class="mt-5 mb-4">HIGH SCORES</h2>
+
     
     <div id="highScoreList">
         <div class="row border-bottom mt-3">
@@ -41,6 +55,7 @@
     </div>
 
         <button onclick="playAgain()" type="button" class="btn btn-lg mt-5" style="background-color: #F7B733">PLAY AGAIN?</button>
+
         </div>
 
     </div>
