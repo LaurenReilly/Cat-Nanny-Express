@@ -13,6 +13,20 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Shrikhand" rel="stylesheet">
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBIZFGwz6xcS7Ph0DwwyFAzfLKcVK-vQQs",
+        authDomain: "cat-nanny-express.firebaseapp.com",
+        databaseURL: "https://cat-nanny-express.firebaseio.com",
+        projectId: "cat-nanny-express",
+        storageBucket: "cat-nanny-express.appspot.com",
+        messagingSenderId: "720997033836"
+    };
+    firebase.initializeApp(config);
+    </script>
 </head>
 <body>
     <div class="container-fluid">
@@ -57,6 +71,7 @@
         <audio src="sounds/dog.wav" id="dogSound"></audio>
         <audio src="sounds/right.wav" id="rightSound"></audio>
         <audio src="sounds/wrong.wav" id="wrongSound"></audio>
+        <audio src="sounds/success.wav" id="successSound"></audio>
     </div>
 
 
