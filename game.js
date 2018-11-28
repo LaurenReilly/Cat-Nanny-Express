@@ -1,3 +1,7 @@
+//firebase
+var database = firebase.database();
+var highScoreList = database.ref('highScores/');
+
 //animal object
 var pet = {
     feed: 0,
@@ -9,11 +13,13 @@ var pet = {
 var player = {
     score: 0
 }
+
 //sounds
 var catSound = document.getElementById("catSound");
 var dogSound = document.getElementById("dogSound");
 var rightSound = document.getElementById("rightSound");
 var wrongSound = document.getElementById("wrongSound");
+var successSound = document.getElementById("successSound");
 
 //set userName and score on Game Page
 var userScore = document.getElementById("gameScore");
@@ -80,10 +86,11 @@ function statusBar() {
     status.style.height = (`${percentage}%`);
     if (total === 15) {
         pet.active = false;
-        petContainer.innerHTML = `<h2 class="montserrat text-center mt-5" style="color: #FC4A1A;">Great Job!</h2> <br/> <h2 class="shrikhand text-center">+ 100</h2> <br/> <h2 class="montserrat text-center" style="color: #FC4A1A;">Choose another Pet</h2>`;
+        petContainer.innerHTML = `<h2 class="montserrat text-center mt-5" style="color: #FC4A1A;">Great Job!</h2> <br/> <h2         class="shrikhand text-center">+ 100</h2> <br/> <h2 class="montserrat text-center" style="color: #FC4A1A;">Choose        another Pet</h2>`;
         petNameContainer.innerHTML = "";
         player.score += 100;
         userScore.innerHTML = player.score;
+        successSound.play();
     }
 }
 
@@ -130,12 +137,25 @@ function startTimer(duration) {
 
 //starts a two minute timer when this page loads
 window.onload = function () {
-    var twoMinutes = 60 * 2;
+    var twoMinutes = 60 * 1;
     startTimer(twoMinutes);
 };
+
+//store userdata into firebase
+function storeInFirebase () {
+    var userName = localStorage.getItem("name")
+    var score = localStorage.getItem("score")
+    var newUserData = highScoreList.push();
+    newUserData.set( {
+        name: userName,
+        finalScore: score 
+    });
+}
+
 
 function gameEnd() {
     localStorage.setItem("score",`${player.score}`)
     window.location = "win-screen.html";
     //store userdata into firebase
+    storeInFirebase();
 }
