@@ -1,5 +1,6 @@
 var database = firebase.database();
 
+
 var highScoreContainer = document.querySelector('highScoreContainer');
 var highScore = firebase.database().ref('highScores/');
 
@@ -19,13 +20,23 @@ function playAgain() {
 //download information from firebase and display it
 function highScoreList() {
 
-   var highScore = firebase.database().ref('highScores/').orderByChild('highScores/finalScore').limitToFirst(10);
+   var scoresRef = firebase.database().ref('highScores/').orderByChild('highScores/finalScore').limitToFirst(10);
 
-   var nameFromDb = entry.val().name;
-   var scoreFromDb = entry.val().finalScore
-   highScore = `
-   <div class="row border-bottom mt-3">
-       <div class="col" style="font-size: 22px;" id="username">${nameFromDb}</div>
-       <div class="col" style="font-size: 22px;" id="highscores">${scoreFromDb}</div>
-   </div> ` 
+   scoresRef.once('value', function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+        var nameFromDb = childSnapshot.val().name;
+        var scoreFromDb = childSnapshot.val().finalScore;
+        var highScore = `
+        <div class="row border-bottom mt-3">
+            <div class="col" style="font-size: 22px;" id="username">${nameFromDb}</div>
+            <div class="col" style="font-size: 22px;" id="highscores">${scoreFromDb}</div>
+        </div> ` 
+        document.getElementById('highScoreList').innerHTML += highScore;
+    });
+  });
+
+
+
 }
+
+  highScoreList();
