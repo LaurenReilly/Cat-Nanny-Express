@@ -155,7 +155,8 @@ function storeInFirebase () {
 
 function gameEnd() {
     localStorage.setItem("score",`${player.score}`)
-    window.location = "win-screen.html";
     //store userdata into firebase
     storeInFirebase();
+    //go to end screen
+    window.location = "win-screen.html";
 }
