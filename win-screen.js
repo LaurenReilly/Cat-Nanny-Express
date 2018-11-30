@@ -20,20 +20,39 @@ function playAgain() {
 //download information from firebase and display it
 function highScoreList() {
 
-   var scoresRef = firebase.database().ref('highScores/').orderByChild('highScores/finalScore').limitToFirst(10);
+   var scoresRef = firebase.database().ref('highScores').orderByChild('/finalScore').limitToLast(7);
 
    scoresRef.once('value', function(snapshot) {
+    var ourArray = [];
+    
     snapshot.forEach(function(childSnapshot) {
         var nameFromDb = childSnapshot.val().name;
         var scoreFromDb = childSnapshot.val().finalScore;
+        ourArray.push(
+            {
+                name: nameFromDb,
+                finalScore: scoreFromDb
+            }
+        )
+        
+    }); 
+
+    ourArray.sort(function(item1, item2) {
+        return item2.finalScore - item1.finalScore;
+    })
+
+    ourArray.forEach(function(item){
         var highScore = `
         <div class="row border-bottom mt-3">
-            <div class="col" style="font-size: 22px;" id="username">${nameFromDb}</div>
-            <div class="col" style="font-size: 22px;" id="highscores">${scoreFromDb}</div>
+            <div class="col" style="font-size: 22px;" id="username">${item.name}</div>
+            <div class="col" style="font-size: 22px;" id="highscores">${item.finalScore}</div>
         </div> ` 
+
         document.getElementById('highScoreList').innerHTML += highScore;
-    });
+    })
+
   });
+
 
 
 
