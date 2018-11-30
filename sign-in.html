@@ -15,33 +15,36 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Shrikhand" rel="stylesheet">
 </head>
 <body>
-    <h1 class="shrikhand m-5">Cat Nanny Express</h1>
+    <h1 class="shrikhand m-5 text-center">Cat Nanny Express</h1>
 
-    <br>
+   
     <div class="container">
         <p class="montserrat m-4 text-center">Who's Your Nanny?</p>
         <form id="frm1" name="frm1">
-            <div class="form-group">
-                <label for="nannyName">Nanny Name:</label>
-                <input type="text" name="usrname" maxlength="12" class="form-control" id="playerName" aria-describedby="playerName" placeholder="Meow" required>
+            <div class="form-group d-flex flex-row justify-content-center">
+                
+                <input type="text" name="usrname" maxlength="12" class="form-control" id="playerName" aria-describedby="playerName" placeholder="Nanny Name">
+                <button id="userNameSubmit" type="button" form="frm1" onclick="setName()" class="entrance rounded ml-1 actionButton">Come on in!</button>
+                
             </div>
                     
             <div class="d-flex justify-content-center">
-                <button id="userNameSubmit" type="button" form="frm1" onclick="setName()" class="btn btn-primary">Come on in!</button>
-                <p id="demo"></p>
+               
             </div>
         </form>
   </div>
-  <div class="text-center">
-      <h3 class="montserrat m-5">Instructions:</h3>
-      <p>1. Pick your animal!</p>
-      <p>2. care for pet to boost <br>
+  <div class=" text-center">
+      <h3 class="instr montserrat mt-5 mb-3">Instructions:</h3>
+      <p class="struction">1. Pick your animal!</p>
+      <p class="struction">2. Care for pet to boost <br>
         health points, by clicking buttons!</p>
-      <p>3. Care for as many pets as possible within 3 minutes!</p>
-      <p>4. Repeat</p>
+      <p class="struction">3. Care for as many pets as possible within 3 minutes!</p>
+      <p class="struction">4. Repeat!</p>
 
       
   </div>
+
+  <div id="tuna"></div>
 
     <!-- our javscript file -->
     <script src="sign-in.js"></script>
