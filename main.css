@@ -35,28 +35,94 @@ body {
     overflow: hidden;
 }
 
-.form-control {
-    height: 2.5em;
-    width: 16em;
-    font-size: 20px; 
-   
-}
 
-input {
-    display: block;
-    Margin: 0 auto;
-}
 
-p{
-    font-family: 'Montserrat', sans-serif;  
-}
 
+
+
+
+
+
+
+
+
+p {
+  font-family:  'Montserrat', sans-serif; 
+}
+.instr {
+    font-family: 'Shrikhand', cursive;
+    color: #FC4A1A;
+    text-shadow: 3px 3px #F7B733;
+    font-size: 2.5em;
+}
 .struction{
-    color: #F7B733;
+    font-family: 'Montserrat', sans-serif;
+    color: #DFDCE3;
+    font-weight: bold;
+    font-size: 1.5em;
 }
-button {
-    background-color:#F7B733;
-    
-    
+.entrance{
+ background-color:#F7B733;
+ font-family: 'Montserrat', sans-serif;
+ border: none;
+ color:  #FC4A1A;
+ font-weight: bold;
+}
+.entrance:focus{
+    outline: none;
 }
 
+
+
+
+
+
+#playerName{
+height: 50px;
+width: 200px;
+font-weight: bold;
+color: #FC4A1A;
+
+}
+
+#playerName::placeholder{
+    color:  #4ABDAC;
+}
+#playerName:focus{
+    outline: none;
+}
+
+.labelMe{
+    display: block;
+    text-align: center;
+    line-height: 150%;
+    font-size: .85em;
+
+}
+#tuna {
+    background: url(http://stash.rachelnabors.com/img/codepen/tuna_sprite.png) 0 0 no-repeat; 
+    height: 200px; width: 400px;
+    position: absolute;
+    bottom: 3em;
+    margin-left: -300px;
+    left: 50%;
+    transition: margin-left 4s linear;
+    animation: 
+      walk-cycle 1s steps(12) 4, 
+      sit-down .5s steps(5) 4s 1;
+    animation-fill-mode: forwards;
+  }
+  
+  /* Above I'm using duration to kick off a second animation after the first starts. See this key:
+  
+  animation: name duration timing-function delay iteration-count direction fill-mode; */
+  
+  @keyframes walk-cycle {  
+    0% { background-position: 0 0; } 
+    100% {background-position: 0 -2391px; } 
+  }
+  
+  @keyframes sit-down {  
+    0% { background-position: -400px 0; } 
+    100% {background-position: -400px -1000px; } 
+  }
