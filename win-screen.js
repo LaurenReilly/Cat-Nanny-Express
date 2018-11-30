@@ -14,7 +14,7 @@ scoreContainer.innerHTML = score;
 
 //play again button
 function playAgain() {
-   window.location = "sign-in.html";
+   window.location = "index.html";
 }
 
 //download information from firebase and display it
