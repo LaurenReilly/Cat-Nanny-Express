@@ -35,20 +35,19 @@ body {
     overflow: hidden;
 }
 
+.actionButton {
+    transition: transform .25s ease-out;
+    margin-left: 2em;
+}
 
-
-
-
-
-
-
-
-
-
+.actionButton:active {
+    transform: scale(1.2, 1.2);
+}
 
 p {
   font-family:  'Montserrat', sans-serif; 
 }
+
 .instr {
     font-family: 'Shrikhand', cursive;
     color: #FC4A1A;
@@ -123,10 +122,6 @@ color: #FC4A1A;
     0% { background-position: -400px 0; } 
     100% {background-position: -400px -1000px; } 
   }
-.actionButton {
-    transition: transform .25s ease-out;
-    margin-left: 2em;
-}
 
 .actionButton:active {
     transform: scale(1.2, 1.2);
