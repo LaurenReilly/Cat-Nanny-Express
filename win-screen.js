@@ -14,13 +14,13 @@ scoreContainer.innerHTML = score;
 
 //play again button
 function playAgain() {
-   window.location = "sign-in.html";
+   window.location = "index.html";
 }
 
 //download information from firebase and display it
 function highScoreList() {
 
-   var scoresRef = firebase.database().ref('highScores').orderByChild('/finalScore').limitToLast(7);
+   var scoresRef = firebase.database().ref('highScores').orderByChild('/finalScore').limitToLast(5);
 
    scoresRef.once('value', function(snapshot) {
     var ourArray = [];
@@ -44,8 +44,8 @@ function highScoreList() {
     ourArray.forEach(function(item){
         var highScore = `
         <div class="row border-bottom mt-3">
-            <div class="col" style="font-size: 22px;" id="username">${item.name}</div>
-            <div class="col" style="font-size: 22px;" id="highscores">${item.finalScore}</div>
+            <img src="images/paw.png" /><div class="col" style="font-size: 22px; color:#DFDCE3; font-family: Montserrat" id="username">${item.name}</div>
+            <div class="col" style="font-size: 22px; color:#DFDCE3; font-family: Montserrat" id="highscores">${item.finalScore}</div>
         </div> ` 
 
         document.getElementById('highScoreList').innerHTML += highScore;
