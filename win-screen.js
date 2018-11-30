@@ -44,7 +44,7 @@ function highScoreList() {
     ourArray.forEach(function(item){
         var highScore = `
         <div class="row border-bottom mt-3">
-            <div class="col" style="font-size: 22px; color:#DFDCE3; font-family: Montserrat" id="username">${item.name}</div>
+            <img src="images/paw.png" /><div class="col" style="font-size: 22px; color:#DFDCE3; font-family: Montserrat" id="username">${item.name}</div>
             <div class="col" style="font-size: 22px; color:#DFDCE3; font-family: Montserrat" id="highscores">${item.finalScore}</div>
         </div> ` 
 
