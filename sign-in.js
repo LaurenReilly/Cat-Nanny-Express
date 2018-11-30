@@ -12,6 +12,7 @@ function setName() {
     //prevents user from progressing if they use foul language!
     if (badWords.includes(userName.toLowerCase())) {
         userNameSubmit.style.backgroundColor = "#FC4A1A";
+        userNameSubmit.style.color = "#F7B733";
         userNameSubmit.innerHTML = "Our animals have sensitive ears!!!"
     } else {
         //set username and initial score in the localStorage so we can use it across all our pages
