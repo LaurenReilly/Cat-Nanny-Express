@@ -1,6 +1,5 @@
 var database = firebase.database();
 
-
 var highScoreContainer = document.querySelector('highScoreContainer');
 var highScore = firebase.database().ref('highScores/');
 
@@ -11,6 +10,32 @@ var score = localStorage.getItem("score");
 //putting the score on the page
 var scoreContainer = document.getElementById("scoreContainer");
 scoreContainer.innerHTML = score;
+
+//Award a Nanny level based on score
+function nannyLevel() {
+    var nannyLevelContainer = document.getElementById("nannyLevel");
+    if (score <= 400) {
+        nannyLevelContainer.innerHTML = "Neglectful!";
+    } else if (score >400 && score <= 700) {
+        nannyLevelContainer.innerHTML = "Embarassing!";
+    } else if (score >700 && score <= 800) {
+        nannyLevelContainer.innerHTML = "Decent!";
+    } else if (score >800 && score <= 1000) {
+        nannyLevelContainer.innerHTML = "Aspirational!";
+    } else if (score >1000 && score <= 1200) {
+        nannyLevelContainer.innerHTML = "Brilliant!";
+    } else if (score >1200 && score <= 1300) {
+        nannyLevelContainer.innerHTML = "Marvelous!";
+    } else if (score >1300 && score <= 1400) {
+        nannyLevelContainer.innerHTML = "Supreme!";
+    } else if (score >1400 && score <= 1500) {
+        nannyLevelContainer.innerHTML = "Legendary!";
+    } else if (score > 1500) {
+        nannyLevelContainer.innerHTML = "Animal Whisperer!";
+    }
+}
+
+nannyLevel();
 
 //play again button
 function playAgain() {
@@ -33,13 +58,13 @@ function highScoreList() {
                 name: nameFromDb,
                 finalScore: scoreFromDb
             }
-        )
+        );
         
     }); 
 
     ourArray.sort(function(item1, item2) {
         return item2.finalScore - item1.finalScore;
-    })
+    });
 
     ourArray.forEach(function(item){
         var highScore = `
@@ -50,12 +75,7 @@ function highScoreList() {
 
         document.getElementById('highScoreList').innerHTML += highScore;
     })
-
   });
-
-
-
-
 }
 
   highScoreList();

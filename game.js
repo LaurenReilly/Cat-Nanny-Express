@@ -35,13 +35,62 @@ function setUserAndScore() {
 setUserAndScore();
 
 //array of potential pet names
-var names = ["Lorenzo", "Roxy", "Opal", "Vincent", "Joel", "Karlyn", "Dorie", "Mollie", "Gem", "Britt", "Emilia", "Hillary","Freddy", "Anastacia", "Shaunda", "Velda", "Selene", "Heath", "Bradley", "Torrie", "Christian", "Sachiko", "Jarrod", "Loree", "Bernice", "Georgianne", "Shon", "Hershel", "Tiesha", "Miles", "Karmen", "Kai", "Lue", "Cora", "Jessia", "Lavina", "Alex", "Eun", "Edith", "Meda", "Alysha", "Fidela", "Tori", "Malik", "Xavier", "Tad", "Blanch", "Loma", "Terisa", "Annice", "Lorna", "Mittie", "Cara", "Daisey", "Beula", "Mariann", "Treva", "Gilma", "Dee", "Ophelia", "Sherril", "Verlene", "Carter", "Lynnette", "Suellen", "Alanna", "Shirleen", "Shiela", "Edda", "Hae", "Maggie", "Katharyn", "Chery", "Augustina", "Blake", "Waylon", "Kam", "Trudie", "Ernestina", "Tyra", "Yukiko", "Anh", "Latashia", "Wilhelmina", "Derick", "Yolanda", "Lakesha", "Janessa", "Cristie", "Marilyn", "Ewa", "Geraldo", "Jonah", "Norene", "Max", "Shin", "Ervin", "Thelma", "Rhett", "Hiram", "Peggy", "Mattie", "Araceli", "Sadye", "Tesha", "Bettyann", "Marivel", "Sidney", "Isabella", "Seema", "Erminia", "Wilfred", "Derick", "Lamonica", "Sherly", "Iliana", "Harriett", "Valeria", "Clay", "Marlo", "Dot", "Rema", "Rossie", "Royce", "Isaiah", "Daryl", "Danette", "Eugene", "Sharda", "Michaela", "Mandy", "Wiley", "Jeanne", "Latoya", "Dovie", "Hui", "Amada", "Kristina", "Juliana", "Denese", "Amiee", "Chas", "Sherrill", "Devon", "Marisela", "Dione", "Nadia", "Vanna", "Frieda", "Kyra", "Boots", "Marshmallow", "Whiskers", "Kya", "Rocky", "Minerva", "Luna", "Frances", "Sadie", "Fang", "Frodo", "Albus", "SnickerDoodle", "Sugar", "Fuzzy-Lumpkins", "Mr. MooMoo", "Alcatraz", "Rhonda", "Norbert", "Snitch", "Mittens", "Peaches", "Spot", "Dot", "Dingo", "Buster", "Ringo", "Boo", "Fluffy", "Hedwig", "Andromeda", "Sirius", "Grim", "Algernon", "Pig", "Floof", "Kitty", "Pup", "Jazzy", "Tinsel", "Monkey", "Mario", "Spike", "Cookie", "Buddy", "Alice", "Mithrandir", "Tom", "Jerry", "Mouse", "Finn", "Wolfy", "Bailey", "Steven", "Garnet", "Pearl", "Amethyst", "Pink", "Blue", "Salty", "Pepper", "Penny", "Copper", "Old-Dan", "Little-Ann", "Yeller"]
+var names = ["Lorenzo", "Roxy", "Opal", "Vincent", "Joel", "Karlyn", "Dorie", "Mollie", "Gem", "Britt", "Emilia", "Hillary","Freddy", "Anastacia", "Shaunda", "Velda", "Selene", "Heath", "Bradley", "Torrie", "Christian", "Sachiko", "Jarrod", "Loree", "Bernice", "Georgianne", "Shon", "Hershel", "Tiesha", "Miles", "Karmen", "Kai", "Lue", "Cora", "Jessia", "Lavina", "Alex", "Eun", "Edith", "Meda", "Alysha", "Fidela", "Tori", "Malik", "Xavier", "Tad", "Blanch", "Loma", "Terisa", "Annice", "Lorna", "Mittie", "Cara", "Daisey", "Beula", "Mariann", "Treva", "Gilma", "Dee", "Ophelia", "Sherril", "Verlene", "Carter", "Lynnette", "Suellen", "Alanna", "Shirleen", "Shiela", "Edda", "Hae", "Maggie", "Katharyn", "Chery", "Augustina", "Blake", "Waylon", "Kam", "Trudie", "Ernestina", "Tyra", "Yukiko", "Anh", "Latashia", "Wilhelmina", "Derick", "Yolanda", "Lakesha", "Janessa", "Cristie", "Marilyn", "Ewa", "Geraldo", "Jonah", "Norene", "Max", "Shin", "Ervin", "Thelma", "Rhett", "Hiram", "Peggy", "Mattie", "Araceli", "Sadye", "Tesha", "Bettyann", "Marivel", "Sidney", "Isabella", "Seema", "Erminia", "Wilfred", "Derick", "Lamonica", "Sherly", "Iliana", "Harriett", "Valeria", "Clay", "Marlo", "Dot", "Rema", "Rossie", "Royce", "Isaiah", "Daryl", "Danette", "Eugene", "Sharda", "Michaela", "Mandy", "Wiley", "Jeanne", "Latoya", "Dovie", "Hui", "Amada", "Kristina", "Juliana", "Denese", "Amiee", "Chas", "Sherrill", "Devon", "Marisela", "Dione", "Nadia", "Vanna", "Frieda", "Kyra", "Boots", "Marshmallow", "Whiskers", "Kya", "Rocky", "Minerva", "Luna", "Frances", "Sadie", "Fang", "Frodo", "Albus", "SnickerDoodle", "Sugar", "Fuzzy-Lumpkins", "Mr. MooMoo", "Alcatraz", "Rhonda", "Norbert", "Snitch", "Mittens", "Peaches", "Spot", "Dot", "Dingo", "Buster", "Ringo", "Boo", "Fluffy", "Hedwig", "Andromeda", "Sirius", "Grim", "Algernon", "Pig", "Floof", "Kitty", "Pup", "Jazzy", "Tinsel", "Monkey", "Mario", "Spike", "Cookie", "Buddy", "Alice", "Mithrandir", "Tom", "Jerry", "Mouse", "Finn", "Wolfy", "Bailey", "Steven", "Garnet", "Pearl", "Amethyst", "Pink", "Blue", "Salty", "Pepper", "Penny", "Copper", "Old-Dan", "Little-Ann", "Yeller", "Mrs. Norris", "Crookshanks", "Dobby", "Odie", "Garfield"]
 
+//gameplay using key bindings W,E,A,S,D
+window.addEventListener("keydown", function(e) {
+    var cat = document.getElementById("cat");
+    var dog = document.getElementById("dog");
+    var feed = document.getElementById("feed");
+    var groom = document.getElementById("groom");
+    var play = document.getElementById("play");
+    switch(e.key) {
+        case "w":
+            cat.classList.add('keyDown');
+            generateCat();
+            addEventListener("transitionend", function () {
+                cat.classList.remove('keyDown');
+            });
+                break;
+        case "e":
+            dog.classList.add('keyDown');
+            generateDog();
+            addEventListener("transitionend", function () {
+                dog.classList.remove('keyDown');
+            });
+                break;
+        case "a":
+            feed.classList.add('keyDown');
+            incrementScore("feed");
+            addEventListener("transitionend", function () {
+                feed.classList.remove('keyDown');
+            });
+                break;
+        case "s":
+            groom.classList.add('keyDown');
+            incrementScore("groom");
+            addEventListener("transitionend", function () {
+                groom.classList.remove('keyDown');
+            });
+                break;
+        case "d":
+            play.classList.add('keyDown');
+            incrementScore("play");
+            addEventListener("transitionend", function () {
+                play.classList.remove('keyDown');
+            });
+                break;
+        default:
+                break;
+    }
+});
 
 //generate dog on click
 var petContainer = document.getElementById("pet");
 
 function generateDog() {
+    petContainer.innerHTML = `<h2 class="montserrat text-center mt-5" style="color: #FC4A1A;">Where is that Dog...</h2>
+        <img class="m-auto d-block" src="images/dog.png">`
     axios.get("https://dog.ceo/api/breeds/image/random").then(function(data) {
         petContainer.innerHTML = `<img class="rounded" src="${data.data.message}" style="height: auto; width: 390px;">`;    
     });
@@ -49,11 +98,15 @@ function generateDog() {
     generateName();
     startingStatus();
     statusBar();
+    //set current time to zero so that sound can play immediately instead of waiting for it to finish playing the entire sound clip before being able to play again
+    dogSound.currentTime = 0;
     dogSound.play();
 }
 
 //generate cat on click
 function generateCat() {
+    petContainer.innerHTML = `<h2 class="montserrat text-center mt-5" style="color: #FC4A1A;">Where is that Cat...</h2>
+        <img class="m-auto d-block" src="images/cat.png">`
     axios.get("https://aws.random.cat/meow").then(function(data) {
         petContainer.innerHTML = `<img class="rounded" src="${data.data.file}" style="height: auto; width: 390px;">`;    
     });
@@ -61,6 +114,7 @@ function generateCat() {
     generateName();
     startingStatus();
     statusBar();
+    catSound.currentTime = 0;
     catSound.play();
 }
 
@@ -86,10 +140,11 @@ function statusBar() {
     status.style.height = (`${percentage}%`);
     if (total === 15) {
         pet.active = false;
-        petContainer.innerHTML = `<h2 class="montserrat text-center mt-5" style="color: #FC4A1A;">Great Job!</h2> <br/> <h2         class="shrikhand text-center">+ 100</h2> <br/> <h2 class="montserrat text-center" style="color: #FC4A1A;">Choose        another Pet</h2>`;
+        petContainer.innerHTML = `<h2 class="montserrat text-center mt-5" style="color: #FC4A1A;">Great Job!</h2> <br/> <h2 class="shrikhand text-center">+ 100</h2> <br/> <h2 class="montserrat text-center" style="color: #FC4A1A;">Choose another Pet</h2>`;
         petNameContainer.innerHTML = "  ";
         player.score += 100;
         userScore.innerHTML = player.score;
+        successSound.currentTime = 0;
         successSound.play();
     }
 }
@@ -102,11 +157,13 @@ function incrementScore(care) {
             pet[care] ++;
             player.score ++;
             userScore.innerHTML = player.score;
+            rightSound.currentTime = 0;
             rightSound.play();
         } else if (pet[care] >= 5) {
             pet[care] --;
             player.score --;
             userScore.innerHTML = player.score;
+            wrongSound.currentTime = 0;
             wrongSound.play();
         }
         statusBar();
@@ -144,13 +201,20 @@ window.onload = function () {
 //store userdata into firebase
 function storeInFirebase () {
     var userName = localStorage.getItem("name")
-    var score = localStorage.getItem("score")
+    var score = parseInt(localStorage.getItem("score"), 10);
     var newUserData = highScoreList.push();
     newUserData.set( {
         name: userName,
         finalScore: score 
     });
 }
+
+//this would store the score with the username only, but would re-write the score anytime the same username was used...
+function writeUserData(userName, score) {
+    firebase.database().ref('highScores/' + userName).set({
+      finalScore: score,
+    });
+  }
 
 
 function gameEnd() {

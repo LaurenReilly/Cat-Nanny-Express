@@ -36,16 +36,16 @@
         <div class="row">
             <div class="col-2 mt-3">
                 <div class="d-flex flex-column justify-content-between mx-5 mt-5">
-                    <img class="actionButton my-2" onclick="incrementScore('feed')" src="images/food.png" alt="food bowl" width="128" height="128">
-                    <img onclick="incrementScore('groom')" class="actionButton my-2" src="images/groom.png" alt="brush" width="128" height="128">
-                    <img onclick="incrementScore('play')" class="actionButton my-2" src="images/play.png" alt="ball and mouse toy" width="128" height="128">
+                    <img id="feed" class="actionButton my-2" onclick="incrementScore('feed')" src="images/food.png" alt="food bowl" width="128" height="128">
+                    <img id="groom" onclick="incrementScore('groom')" class="actionButton my-2" src="images/groom.png" alt="brush" width="128" height="128">
+                    <img id="play" onclick="incrementScore('play')" class="actionButton my-2" src="images/play.png" alt="ball and mouse toy" width="128" height="128">
                 </div>
             </div>
             <div class="col-5 ml-5">
                 <div class="d-flex flex-column align-content-center justify-content-around m-auto ml-5" style="width: 500px;">
                     <div class="d-flex justify-content-around">
-                        <img src="images/cat.png" class="actionButton" width="80" height="80" onclick="generateCat()">
-                        <img src="images/dog.png" class="actionButton" width="80" height="80" onclick="generateDog()">
+                        <img src="images/cat.png" class="actionButton" id="cat" width="80" height="80" onclick="generateCat()">
+                        <img src="images/dog.png" class="actionButton" id="dog" width="80" height="80" onclick="generateDog()">
                     </div>
                     <div class="d-flex flex-row justify-content-between">
                         <div class="picture p-1 rounded mt-1" style="height: 400px; width: 500px;">
