@@ -102,10 +102,7 @@ color: #FC4A1A;
 #tuna {
     background: url(http://stash.rachelnabors.com/img/codepen/tuna_sprite.png) 0 0 no-repeat; 
     height: 200px; width: 400px;
-    position: absolute;
     bottom: 3em;
-    margin-left: -300px;
-    left: 50%;
     transition: margin-left 4s linear;
     animation: 
       walk-cycle 1s steps(12) 4, 
@@ -133,4 +130,9 @@ color: #FC4A1A;
 
 .actionButton:active {
     transform: scale(1.2, 1.2);
+}
+
+li {
+    margin: 0;
+    padding: 0;
 }
