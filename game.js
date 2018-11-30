@@ -87,7 +87,7 @@ function statusBar() {
     if (total === 15) {
         pet.active = false;
         petContainer.innerHTML = `<h2 class="montserrat text-center mt-5" style="color: #FC4A1A;">Great Job!</h2> <br/> <h2         class="shrikhand text-center">+ 100</h2> <br/> <h2 class="montserrat text-center" style="color: #FC4A1A;">Choose        another Pet</h2>`;
-        petNameContainer.innerHTML = "";
+        petNameContainer.innerHTML = "  ";
         player.score += 100;
         userScore.innerHTML = player.score;
         successSound.play();
@@ -135,10 +135,10 @@ function startTimer(duration) {
     }, 1000);
 }
 
-//starts a two minute timer when this page loads
+//starts a one minute timer when this page loads
 window.onload = function () {
-    var twoMinutes = 60 * 2;
-    startTimer(twoMinutes);
+    var oneMinute = 60;
+    startTimer(oneMinute);
 };
 
 //store userdata into firebase
@@ -155,7 +155,8 @@ function storeInFirebase () {
 
 function gameEnd() {
     localStorage.setItem("score",`${player.score}`)
-    window.location = "win-screen.html";
     //store userdata into firebase
     storeInFirebase();
+    //go to end screen
+    window.location = "win-screen.html";
 }

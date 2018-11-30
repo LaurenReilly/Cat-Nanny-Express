@@ -18,7 +18,7 @@ body {
     font-family: 'Shrikhand', cursive;
     color: #FC4A1A;
     text-shadow: 3px 3px #F7B733;
-    font-size: 4em;
+    font-size: 5em;
 }
 
 .montserrat {
@@ -33,4 +33,13 @@ body {
 
 #pet {
     overflow: hidden;
+}
+
+.actionButton {
+    transition: transform .25s ease-out;
+    margin-left: 2em;
+}
+
+.actionButton:active {
+    transform: scale(1.2, 1.2);
 }

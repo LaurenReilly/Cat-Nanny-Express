@@ -29,42 +29,45 @@
     </script>
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container">
         <div class="text-center">
-            <h1 class="shrikhand mb-4">Cat Nanny Express</h1>
+            <h1 class="shrikhand mb-3">Cat Nanny Express</h1>
         </div>
         <div class="row">
-            <div class="col-3">
-                <div class="d-flex flex-column justify-content-between mt-5">
-                    <button onclick="incrementScore('feed')" class="btn btn-success btn-lg m-5">Feed</button>
-                    <button onclick="incrementScore('groom')" class="btn btn-primary btn-lg m-5">Groom</button>
-                    <button onclick="incrementScore('play')" class="btn btn-warning btn-lg m-5">Play</button>
+            <div class="col-2 mt-3">
+                <div class="d-flex flex-column justify-content-between mx-5 mt-5">
+                    <img class="actionButton my-2" onclick="incrementScore('feed')" src="images/food.png" alt="food bowl" width="128" height="128">
+                    <img onclick="incrementScore('groom')" class="actionButton my-2" src="images/groom.png" alt="brush" width="128" height="128">
+                    <img onclick="incrementScore('play')" class="actionButton my-2" src="images/play.png" alt="ball and mouse toy" width="128" height="128">
                 </div>
             </div>
-            <div class="col-4 mr-5">
-                <div class="d-flex flex-column align-content-center justify-content-around" style="width: 500px;">
+            <div class="col-5 ml-5">
+                <div class="d-flex flex-column align-content-center justify-content-around m-auto ml-5" style="width: 500px;">
                     <div class="d-flex justify-content-around">
-                        <button class="btn btn-success btn-lg" onclick="generateCat()">Cat</button>
-                        <button class="btn btn-primary btn-lg" onclick="generateDog()">Dog</button>
+                        <img src="images/cat.png" class="actionButton" width="80" height="80" onclick="generateCat()">
+                        <img src="images/dog.png" class="actionButton" width="80" height="80" onclick="generateDog()">
                     </div>
                     <div class="d-flex flex-row justify-content-between">
-                        <div class="picture p-1 rounded mt-2" style="height: 400px; width: 500px;">
+                        <div class="picture p-1 rounded mt-1" style="height: 400px; width: 500px;">
                             <div id="pet" class="image rounded m-auto" style="height: 390px; width: 390px; background-color: #F7B733"></div>
                         </div>
                     </div>
                     <div id="name" class="montserrat text-center"></div>
                 </div>
             </div>
-            <div class="col-1 m-5">
+            <div class="col-1" style="margin-left: 2em; margin-top: 5.4em">
                     <div class="outer m-auto d-flex justify-content-center align-items-end p-1 rounded" style="height: 400px; width: 40px; background-color: #FC4A1A;">
-                        <div id="statusBar" class="inner rounded" style="height: 10%; width: 36px; background-color: #F7B733;"></div>
+                        <div id="statusBar" class="inner rounded" style="height: 10%; width: 36px; background-color: #F7B733;">
+                        </div>
                     </div>
             </div>
             <div class="col-2 d-flex flex-column mt-5 justify-content-center align-items-center">
+                    <h4 id="gameName" class="shrikhand text-center mb-3" style="font-size: 3em"></h4>
                     <h3 class="montserrat text-center">Time Remaining:</h3>
                     <div id="timer" class="montserrat mb-3"></div>
-                    <h3 id="gameName" class="montserrat text-center mb-3"></h3>
-                    <h2 class="montserrat text-center">YourScore: <span id="gameScore" class="shrikhand" style="font-size: 2em"></span></h2>
+
+                    <h2 class="montserrat text-center">YourScore:</h2>
+                    <span id="gameScore" class="shrikhand" style="font-size: 3em"></span>
             </div>
         </div>
         <audio src="sounds/cat.wav" id="catSound"></audio>
