@@ -44,6 +44,11 @@ body {
     transform: scale(1.2, 1.2);
 }
 
+.keyDown {
+    transform: scale(1.2, 1.2);
+    transition: transform .25s ease-out;
+}
+
 p {
   font-family:  'Montserrat', sans-serif; 
 }
@@ -71,11 +76,6 @@ p {
     outline: none;
 }
 
-
-
-
-
-
 #playerName{
 height: 50px;
 width: 200px;
@@ -98,13 +98,14 @@ color: #FC4A1A;
     font-size: .85em;
 
 }
+
 #tuna {
     background: url(http://stash.rachelnabors.com/img/codepen/tuna_sprite.png) 0 0 no-repeat; 
     height: 200px; width: 400px;
     bottom: 3em;
     transition: margin-left 4s linear;
     animation: 
-      walk-cycle 1s steps(12) 4, 
+      walk-cycle 1s steps(12) 4,
       sit-down .5s steps(5) 4s 1;
     animation-fill-mode: forwards;
   }
