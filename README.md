@@ -4,9 +4,9 @@ A SUPREMELY FUN game where you play as a pet Nanny who tries to figure out what 
 ## Description
 
 Enter a username on the sign in page and press the button. You'll then go to the game page where a 60 second timer will begin. From here you can either click on the Cat/Dog icons to begin playing or use the keyboard (W for cat and E for dog). An image of the animal of your choice will appear but you don't have to wait for it to appear to begin taking care of it, some animals are just a little shy! 
----
+
 The animal will come to you with randomly generated secret stats for feeding/grooming/playing. It is up to you to figure out what the animal needs to fill its status bar and go home to its parents in a better state than it arrived. Click on the icons or use the keyboard to feed (A), groom (S), and play (D) with the animal. If you go too far in any category your score will go down by one, taking care of animals is a precise art! When you've maxed out that pet's score bar it will go home and you will be awarded 100 points! 
----
+
 If you still have time on the clock you can choose another pet to care for. See how many pets you can successfully take care of in 60 seconds. Your goal is to try and achieve a high Nanny Level and get your name on the leader board!
 
 ## API's used
