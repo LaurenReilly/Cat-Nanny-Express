@@ -45,7 +45,7 @@ function playAgain() {
 //download information from firebase and display it
 function highScoreList() {
 
-   var scoresRef = firebase.database().ref('highScores').orderByChild('/finalScore').limitToLast(5);
+   var scoresRef = firebase.database().ref('highScores').orderByChild('/finalScore').limitToLast(10);
 
    scoresRef.once('value', function(snapshot) {
     var ourArray = [];
